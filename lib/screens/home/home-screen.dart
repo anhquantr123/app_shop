@@ -1,17 +1,17 @@
+import 'package:app_shop/screens/home/widget_home/app-bar.dart';
+import 'package:app_shop/screens/home/widget_home/body.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
 
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-       body: Center(),
+    return  DefaultTabController(
+      length: 4,
+      child: Scaffold(
+          appBar: AppBarHome(),
+          body: BodyHome(),
+        ),
     );
+
   }
 }
